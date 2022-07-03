@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Entrar | Customize</title>
+    
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="shortcut icon" href="img/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/theme-script.js" defer></script>
+    <script src="js/cadastro.js" defer></script>
+
+
+    <script>
+        const changeThemeToDark = () => {
+            document.documentElement.setAttribute("data-theme", "dark");
+            localStorage.setItem("data-theme", "dark");
+        }
+    
+        const changeThemeToLight = () => {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("data-theme", 'light');
+        }
+        let theme = localStorage.getItem('data-theme');
+        if (theme == 'dark') changeThemeToDark();
+      </script>
+</head>
+<body>
+
+    <header id="main">
+        <a href="index.html">
+            <div class="img"></div>
+        </a>
+        <nav>
+
+            <ul class="icons">
+                <div class="theme">
+                    <input type="checkbox" class="checkbox" name="toggle-dark" id="toggle-dark">
+                    <label class="label" for="toggle-dark">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!--            -->
+
+    <main>
+     <h1 class="title">Olá novamente!</h1>
+        <section class="container">
+
+          <div class="form">
+            <h1>Cadaste-se</h1>
+            <form action="" method="post">
+
+            <div class="form_label">
+                <label for="username" class="placeholder">Usuário</label>
+                <input type="text" name="username" id="username" class="input" maxlength="40" onfocus="placeholder1()" onblur="placeholderout1()" onchange="togglebuttoncad()" required>
+            </div> 
+
+            <div class="form_label">
+                <label for="email" class="placeholder">Email</label>
+                <input type="email" name="email" id="email" class="input" onfocus="placeholder2()" onblur="placeholderout2()" onchange="togglebuttoncad()" required>
+            </div>
+
+            <div class="form_label">
+                <label for="senha" class="placeholder">Senha</label>
+                <input type="password" name="senha" id="password" class="input" onfocus="placeholder3()" onblur="placeholderout3()" onchange="togglebuttoncad()" required>
+                <label for="password" class="showPass disabled" onclick="pass()"><i class="fa-regular fa-eye"></i></label>
+            </div>
+
+            <div class="form_label">
+                <label for="senha" class="placeholder">Confirme a Senha</label>
+                <input type="password" name="passwordconfirm" id="passwordconfirm" class="input" onfocus="placeholder4()" onblur="placeholderout4()" onchange="togglebuttoncad()" required>
+                <label for="passwordconfirm" class="showPass disabled" onclick="passconfirm()"><i class="fa-regular fa-eye"></i></label>
+            </div>
+
+            <div class="link">   
+                <a href="login.html">Entrar</a>  
+            </div>
+
+            <button id="loginbutton" class="desativado" disabled><span>Cadastrar</span></button>
+            
+
+            </form>
+
+          </div>
+
+        </section>
+
+        <section>
+
+        </section>
+
+           
+           
+       
+
+    </main>
+</body>
+</html>

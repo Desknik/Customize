@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Sobre a gente!</title>
+    
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="shortcut icon" href="img/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sobre.css">
+    <script src="js/theme-script.js" defer></script>
+
+
+    <script>
+        const changeThemeToDark = () => {
+            document.documentElement.setAttribute("data-theme", "dark");
+            localStorage.setItem("data-theme", "dark");
+        }
+    
+        const changeThemeToLight = () => {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("data-theme", 'light');
+        }
+        let theme = localStorage.getItem('data-theme');
+        if (theme == 'dark') changeThemeToDark();
+      </script>
+</head>
+<body>
+
+    <header id="main">
+        <a href="#main">
+            <div class="img">
+            </div>
+        </a>
+        <nav>
+            <ul class="icons">
+                <div class="theme">
+                    <input type="checkbox" class="checkbox" name="toggle-dark" id="toggle-dark">
+                    <label class="label" for="toggle-dark">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="titulo">Um pouquinho sobre nós!</h1>
+        <section class="sobre">
+            
+
+            <div class="textos">
+                <h2>Como tudo começou?</h2>
+                <p>A Customize foi criada por três integrantes a partir de um projeto acadêmico na ETEC Paulistano.</p> 
+                <p>No inicio, era meramente uma ideia, porém, com o passar do tempo, ganhamos paixão pelo projeto, e, hoje estamos aqui para
+                mudar sua percepção sobre os produtos que você usa no dia a dia. </p>
+                <p>Na Customize você pode criar seu produto do jeitinho que você sempre quis, personalizando da maneira você quiser usando sua imaginação!
+                </p> 
+
+                <h2>Nossa ideia</h2>
+                <p>Nosso intuito é dar a possibilidade de você obter um produto customizado e com uma qualidade superior a de um produto qualquer.</p>
+                <h2>Quem somos</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum facere eos commodi maxime doloribus inventore harum dolores hic deserunt id sunt at natus consequuntur veritatis praesentium cupiditate suscipit, labore cum.</p>
+                </div>
+
+        </section>
+        <div class="line"></div>
+        <section class="cards">
+            <div class="card">
+                <img src="img/Integrantes/James.jpeg" alt="">
+                <div class="content">
+                    <div class="dados">
+                        <div class="nome"><h2>James</h2><span>FrontEnd | Designer</span></div>
+                        
+                        <p>É o zueiro do grupo, ele brinca com tudo, ele é preguiçoso, mas quando está focado não tem nada que esse cara não consegue fazer!</p>
+                        <div class="social">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/Integrantes/Isa.jpeg" alt="">
+                <div class="content">
+                    <div class="dados">
+                        <div class="nome"><h2>Isabella</h2><span>FrontEnd | Documenter</span></div>
+                        
+                        <p>A Isa é a voz feminina do grupo, se dependesse do gosto dela o site seria todo rosa. É ela que nos alegra e deixa a gente a par de todas fofocas também!</p>
+                        <div class="social">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/Integrantes/James.jpeg" alt="">
+                <div class="content">
+                    <div class="dados">
+                        <div class="nome"><h2>Guilherme</h2><span>FrontEnd | Analista</span></div>
+                        
+                        <p>Ele é quem revisa o código do site e mantém ele perfeito, sem nenhum erro, ele também é o camisa 10 da equipe, tem uma pra cada dia da semana!</p>
+                        <div class="social">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
