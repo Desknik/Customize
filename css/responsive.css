@@ -365,12 +365,14 @@ header a:hover{
 .banner .text h1{
     margin: 50px 0px 0px 50px;
     font-size: 5em;  
+    color: var(--inverted-color);
 }
 .banner .text p{
     margin: 0px 50px;
     padding-top: 10px;
     padding-bottom: 40px;
     font-size: 2.5em;
+    color: var(--inverted-color);
 }
 
 /*botões */
@@ -405,12 +407,12 @@ header a:hover{
   /* pers. dos botões */
 
 .banner .button1:hover{
-    letter-spacing: 0.15em;
+    letter-spacing: 0.10em;
     box-shadow: 0 0 25px var(--cor6);
    }
 
 .banner .button2:hover{
-    letter-spacing: 0.15em;
+    letter-spacing: 0.10em;
     box-shadow: 0 0 15px var(--inverted-color);
 }
 
@@ -451,31 +453,25 @@ header a:hover{
 
 
 
-@media (max-width: 2350px) {
+  @media (max-width: 1700px) {
 
-    header .menu{
-        display: flex;
-        justify-content: space-around;
-        gap: 2vh;
-        display: none;
+    html{
+        --background-image-black: url(../img/logo/Logo-Black.png); 
     }
-
-    header .hamburguer{
-        display: block;
+    
+    /* Tema Noturno*/
+    html[data-theme="dark"] {
+        --background-image-black: url(../img/logo/Logo-White.png); 
     }
-  }
-
-  @media (max-width: 2350px) {
-
-    header .menu{
-        display: flex;
-        justify-content: space-around;
-        gap: 2vh;
-        display: none;
-    }
-
-    header .hamburguer{
-        display: block;
+    
+    header .img{
+        width: 10vh;
+        height: 10vh;
+        max-width: 100vh;
+        background-image: var(--background-image-black);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
     }
   }
 
@@ -492,16 +488,29 @@ header a:hover{
 
 
     .banner .button1{
-    font-size: 1.8em;
+    font-size: 1.7em;
     }
     
     .banner .button2{
-    font-size: 1.8em;
+    font-size: 1.7em;
     }
   }
 
   @media (max-width: 1500px) {
 
+    header .menu{
+        display: none;
+
+    }
+
+    header .hamburguer{
+        display: block;
+    }
+
+    header .icons{
+        display: none;
+    }
+    
     .banner .container{
         gap: 5px;
     }
@@ -524,7 +533,7 @@ header a:hover{
 
 
     .banner .button1{
-        margin-right: 20px;
+        margin-right: 15px;
         padding: 15px; 
         font-size: 1.2em;
         font-weight: var(--button-weight);
@@ -539,29 +548,6 @@ header a:hover{
 
 
 @media (max-width: 1024px) {
-
-    html{
-        --background-image-black: url(../img/logo/Logo-Black.png); 
-    }
-    
-    /* Tema Noturno*/
-    html[data-theme="dark"] {
-        --background-image-black: url(../img/logo/Logo-White.png); 
-    }
-    
-    header .img{
-        width: 10vh;
-        height: 10vh;
-        max-width: 100vh;
-        background-image: var(--background-image-black);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100%;
-    }
-
-    header .icons{
-        display: none;
-    }
 
     .background{
         width: 50vw;
@@ -608,7 +594,7 @@ header a:hover{
         margin: 50px 30px;
     }
     .banner .button1{
-        margin-right: 40px;
+        margin-right: 20px;
         padding: 15px; 
         font-size: 1.4em;
     }
@@ -617,6 +603,13 @@ header a:hover{
         padding: 15px;
         font-size: 1.4em;
         }
+    .banner .button1:hover{
+        letter-spacing: 0.05em;
+        }
+    
+    .banner .button2:hover{
+        letter-spacing: 0.05em;
+    }
 }
 
 @media (max-width: 500px) {
@@ -642,12 +635,12 @@ header a:hover{
     .banner .button1{
         margin-right: 30px;
         padding: 15px; 
-        font-size: 1.1em;
+        font-size: 1em;
     }
     
     .banner .button2{
         padding: 15px;
-        font-size: 1.1em;
+        font-size: 1em;
         }
 }
 
@@ -672,14 +665,14 @@ header a:hover{
         margin: 50px 15px;
     }
     .banner .button1{
-        margin-right: 13px;
+        margin-right: 20px;
         padding: 10px; 
-        font-size: 0.9em;
+        font-size: 0.7em;
     }
     
     .banner .button2{
         padding: 10px;
-        font-size: 0.9em;
+        font-size: 0.7em;
         }
 }
 @media (max-width: 300px) {
