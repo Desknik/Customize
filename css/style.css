@@ -25,9 +25,9 @@
     --font-nav: 'Pacifico', cursive;
     --font-normal: 'Montserrat', sans-serif;
   
-    --font-size-titte:80px;
-    --font-size-subtittle:48px;  
-    --font-size-normal:32px;
+    --font-size-titte: clamp( 3rem, 10vw + 0.1rem, 5rem);
+    --font-size-subtittle: clamp( 2.4rem, 5vw + 0.1rem, 3rem);
+    --font-size-normal: clamp( 1.2rem, 3vw + 0.1rem, 2rem);
     --font-size-p:25px;
     --button-weight: 600;
 }
@@ -92,12 +92,14 @@ html::-webkit-scrollbar{
 
 body{
     background-color: var(--main-color);
+    width: 100vw;
+
     
 }
 /* Header*/
 
 header{
-    width: 100%;
+    width: 100vw;
     height: 13.4vh;
     max-height: 20vh;
     background-color: var(--header-color);
@@ -200,11 +202,22 @@ header a:hover{
 
 }
 
-/* Main */ 
-main{
-    width: 100%;
+
+
+/* Banenr */ 
+main .banner{
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+    
 }
-main .text {
+.banner .container{
+    display: flex;
+    justify-content: space-between; 
+    padding: 50px;
+}
+.banner .text {
     display: block;
     position: relative;
     left: 20px;
@@ -213,30 +226,21 @@ main .text {
     width: 1000px;
 }
 
-main .text h1{
-    font-size: var(--font-size-titte);
+.banner .text h1{
+    font-size: var(--font-size-titte);  
 }
-main .text p{
+.banner .container .text p{
     padding-top: 10px;
     padding-bottom: 40px;
     font-size: var(--font-size-normal);
 }
 
-/* banner */
-main .banner{
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-    height: 80vh;
-}
-
-
 /*botões */
-main .button {
+.banner .container .button {
     margin-top: 40px;
   }
 
-main .button1{
+.banner .container .button1{
     padding: 20px;
     margin-right: 10px;
     text-decoration: none;
@@ -249,7 +253,7 @@ main .button1{
     position: relative;
   }
   
-main .button2{
+.banner .container .button2{
     padding: 20px;
     text-decoration: none;
     font-size: 2em;
@@ -262,19 +266,18 @@ main .button2{
 
   /* pers. dos botões */
 
-main .button1:hover{
+.banner .container .button1:hover{
     letter-spacing: 0.15em;
     box-shadow: 0 0 25px var(--cor6);
    }
 
-main .button2:hover{
+.banner .container .button2:hover{
     letter-spacing: 0.15em;
     box-shadow: 0 0 15px var(--inverted-color);
 }
 
    
-
-main .button1:before{
+.banner .container .button1:before{
     content: '';
     position: absolute;
     inset: 4px;
@@ -282,7 +285,7 @@ main .button1:before{
     border-radius: 5px;
 }
 
-main .button2:before{
+.banner .container .button2:before{
     content: '';
     position: absolute;
     inset: 4px;
@@ -290,7 +293,7 @@ main .button2:before{
     border-radius: 5px;
 }
 
-main .button1 span, main .button2 span{
+.banner .container .button1 span, .banner .container .button2 span{
     position: relative;
     z-index: 1;
 }
@@ -298,7 +301,7 @@ main .button1 span, main .button2 span{
 
 .carousel{
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 700px;
    
     background-color: var(--inverted-color);
@@ -560,3 +563,26 @@ footer .copy span{
 }
 
 
+
+@media (max-width: 700px) {
+
+    html{
+        --background-image-black: url(../img/logo/Logo-Black.png); 
+    }
+    
+    /* Tema Noturno*/
+    html[data-theme="dark"] {
+        --background-image-black: url(../img/logo/Logo-White.png); 
+      }
+    
+      header .img{
+        width: 10vh;
+        height: 10vh;
+        max-width: 100vh;
+        background-image: var(--background-image-black);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+    }
+    
+  }
