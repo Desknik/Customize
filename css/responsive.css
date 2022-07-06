@@ -93,6 +93,7 @@ html::-webkit-scrollbar{
 body{
     background-color: var(--main-color);
     width: 100vw;
+    overflow-x: hidden;
 
     
 }
@@ -440,12 +441,193 @@ header a:hover{
 
 /* Imagem */
 .banner img{
- width: 900px;
+ width: 800px;
+ height: 800px;
 }
 
 .mobile{
     display: none;
 }
+
+
+/* Carrosel */
+.carousel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    position: relative;
+   
+    background-color: var(--inverted-color);
+}
+
+.carousel h1{         /* Titulo */
+    padding: 40px 0px;
+    font-size: var(--font-size-subtittle);
+    color: var(--normal-color);
+}
+
+.carousel .container{    /* Box contendo o carrosel */
+    position: relative;
+    width: 1300px;
+    height: 500px;
+    transition: all 0.4s;
+
+    border-radius: 50px;
+    background-color: var(--normal-color);
+    box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.575);
+  }
+
+.carousel .container .btn{   /* Botões de mudar a foto */
+    position: absolute;
+    color: var(--normal-color);
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s;
+    font-size: 1.7em;
+    margin-top: -5px;
+}
+
+.carousel .container .btn:hover{
+   transform: scale(1.5);
+}
+
+.carousel .container #voltar {    /* Botão de voltar */
+    top: 50%;
+    left: -50px;
+}
+
+.carousel .container #proximo { /* Botão de avançar */
+    top: 50%;
+    right: -50px;
+}
+
+
+/*     */
+.carousel .container .wraper{   /* Box envolvendo o content */
+    position: relative;
+    transition: all 0.4s;
+    width: 1300px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.carousel .container .content{   /* Box contendo todas imagens e os botões de mudar a foto */
+    display: flex;
+    width: 3900px;
+    border-radius: 50px;
+}
+
+.carousel .container .balls {      /* Box das bolinhas indicando qual imagem está */
+    position: absolute;
+    width: 1300px;
+    display: flex;
+    justify-content: center;
+    margin-top: -45px;
+}
+
+.carousel .container .balls div{  /* Bolinhas */
+    transition: all 0.5s;
+    border: 3px solid var(--cor7);
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.carousel .container .imgAtual{
+    transform: all 0.5s;
+    background-color: var(--cor7);
+}
+
+.carousel .container .content .balls div:hover{
+    background-color: var(--cor7);
+}
+
+
+.carousel .container .imagens{    /* Box envolvendo as imagens e o conteudo delas */
+    position: relative;
+    transition: all 2s;
+  }
+  .carousel .container .imagens:hover img{  
+    transform: scale(1.1) ;
+  }
+  .carousel .container .imagens img{  
+    transition: all 2s ease-in-out;
+  }
+
+.carousel .container img{   /*imagens */
+    width: 1300px;
+    height: 500px;
+
+}
+
+
+.carousel .container .textos{      /* Textos*/
+    position: absolute;
+    top: 110px;
+    right: 140px;
+
+    width: 530px;
+    height: 210px ;
+}
+
+.carousel .container .textos p{
+    color: var(--inverted-color);
+    font-size: 1.7em;
+}
+
+.carousel .container .botão{  /* Botões de ver detalhes*/
+
+    position: absolute;
+    bottom: 50px;
+    right: 150px;
+}
+
+.carousel .container .button{
+    position: relative;
+    padding: 15px 30px;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: var(--button-weight);
+
+    color: var(--inverted-color);
+    background:linear-gradient(to right, #946CE9, #CB6EC9);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.carousel .container .button::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background-color: var(--normal-color);
+    border-radius:10px;
+    margin:1px;
+}
+
+.carousel .container .button span{
+    position: relative;
+    z-index: 1;
+    color: var(--inverted-color);
+}
+
+.carousel .container .button:hover{
+    box-shadow: 0 0 20px var(--cor6);
+   }
+
+
 
 
 
