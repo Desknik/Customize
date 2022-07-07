@@ -7,6 +7,8 @@ var atual = 0
 var imgAtual = document.getElementsByClassName("imgAtual")
 var rolar = true
 
+var mobileImg = document.getElementById('mobileAtual');
+
 for (let i = 0; i < quant.length; i++) {
   var div = document.createElement('div');
   div.id = i
@@ -43,10 +45,14 @@ function slide(){
     }else if(atual < 0){
         atual = quant.length-1 
     }
-   
+    var tamanho = document.querySelector('.imagens img').width;
+    var tamanhoMob = mobileImg.offsetWidth;
+
     document.querySelector('.imgAtual').classList.remove('imgAtual')
     document.getElementById(atual).classList.add('imgAtual')
-    imagem.style.marginLeft = -1300*atual+'px'
+    imagem.style.marginLeft = -tamanho*atual+'px'
+
+    mobileImg.style.marginLeft = -tamanhoMob*atual+'px'
 }
 
 setInterval(() => {

@@ -7,6 +7,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     font-family: var(--font-normal) ;
@@ -176,15 +177,16 @@ header a:hover{
     cursor: pointer;
     
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 1.2vh;
+    gap: 0.7vh;
     
-    padding: 0.5vh;
+    padding: 1.2vh;
     position: relative;
-    height: 2vh;
-    width: 4.5vh;
-    transform: scale(1.5);
-    font-size: 1.6vh;
+    height: 1vh;
+    width: 4vh;
+    transform: scale(1.8);
+    font-size: 1.3vh;
 }
 
 
@@ -193,18 +195,18 @@ header a:hover{
     border-radius: 50%;
     position: absolute;
 
-    top: 0.4vh;
+    top: 0.35vh;
     left: 0.3vh;
 
-    height: 2.2vh;
-    width: 2.2vh;
+    height: 1.7vh;
+    width: 1.7vh;
 
     transform: translateX(0vh);
     transition: transform 0.2s linear;
 }
 
 .checkbox:checked + .label .ball {
-    transform: translateX(2.8vh);
+    transform: translateX(1.7vh);
 }
 
 /* Menu hamburger */ 
@@ -464,12 +466,15 @@ header a:hover{
 }
 
 .carousel h1{         /* Titulo */
-    padding: 40px 0px;
-    font-size: var(--font-size-subtittle);
+    padding-bottom: 40px;
+    font-size: 3em;
     color: var(--normal-color);
 }
 
 .carousel .container{    /* Box contendo o carrosel */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     position: relative;
     width: 1300px;
     height: 500px;
@@ -527,10 +532,8 @@ header a:hover{
 
 .carousel .container .balls {      /* Box das bolinhas indicando qual imagem está */
     position: absolute;
-    width: 1300px;
     display: flex;
-    justify-content: center;
-    margin-top: -45px;
+    margin-bottom: 1%;
 }
 
 .carousel .container .balls div{  /* Bolinhas */
@@ -547,7 +550,7 @@ header a:hover{
     background-color: var(--cor7);
 }
 
-.carousel .container .content .balls div:hover{
+.carousel .container .balls div:hover{
     background-color: var(--cor7);
 }
 
@@ -556,17 +559,17 @@ header a:hover{
     position: relative;
     transition: all 2s;
   }
-  .carousel .container .imagens:hover img{  
+
+.carousel .container .imagens:hover img{  
     transform: scale(1.1) ;
-  }
-  .carousel .container .imagens img{  
-    transition: all 2s ease-in-out;
-  }
+}
+.carousel .container .imagens img{  
+    transition: transform 2s ease-in-out;
+}
 
 .carousel .container img{   /*imagens */
     width: 1300px;
     height: 500px;
-
 }
 
 
@@ -627,17 +630,93 @@ header a:hover{
     box-shadow: 0 0 20px var(--cor6);
    }
 
+.carousel .container .wraper-mobile{       /* Container para celular */
+    position: relative;
+    transition: all 0.4s;
+    width: 600px;
+    height: 730px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+
+.carousel .container .content-mobile{
+    display: flex;
+    width: 1800px;
+    border-radius: 50px;
+
+}
+
+.carousel .container .content-mobile .mobImagens{
+    position: relative;
+    transition: all 2s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+    width: 600px;
+    height: 730px;
+    clear: both;
+
+    background-color: var(--normal-color);
+}
+
+
+.carousel .container .content-mobile img{
+    position: absolute;
+    top: 40px;  
+    width: 400px;
+    height: 400px;
+}
+
+
+.carousel .container .content-mobile .texto {
+    position: absolute;
+    top: 450px;  
+    text-align: center;
+    color: var(--inverted-color);
+}
+
+.carousel .container .content-mobile .texto p {
+    max-width: 500px;
+    margin:auto auto 40px auto ;
+    font-size: 1.6em;
+  }
+
+  .carousel .container .content-mobile .button{
+    font-size: 1.7em;
+  }
 
 
 
 
 
+  @media (max-width: 2000px) {
+
+    .banner .text {  /*  Responsividade do banner */
+        width: 700px;
+    }
+    
+    .banner img{
+        width: 700px;
+        height: 700px;
+       }
 
 
+    .banner .button1{
+    font-size: 1.7em;
+    }
+    
+    .banner .button2{
+    font-size: 1.7em;
+    }
+  }
 
   @media (max-width: 1700px) {
 
-    html{
+    html{                                                             /*  Responsividade do header */
         --background-image-black: url(../img/logo/Logo-Black.png); 
     }
     
@@ -657,30 +736,9 @@ header a:hover{
     }
   }
 
-  @media (max-width: 2000px) {
-
-    .banner .text {  /* Área dos textos */
-        width: 700px;
-    }
-    
-    .banner img{
-        width: 700px;
-        height: 700px;
-       }
-
-
-    .banner .button1{
-    font-size: 1.7em;
-    }
-    
-    .banner .button2{
-    font-size: 1.7em;
-    }
-  }
-
   @media (max-width: 1500px) {
 
-    header .menu{
+    header .menu{   /*  Responsividade do header */
         display: none;
 
     }
@@ -693,11 +751,11 @@ header a:hover{
         display: none;
     }
     
-    .banner .container{
+    .banner .container{    /*  Responsividade do banner */
         gap: 5px;
     }
 
-    .banner .text {  /* Área dos textos */
+    .banner .text {  
         width: 500px;
     }
 
@@ -725,8 +783,86 @@ header a:hover{
         padding: 15px;
         font-size: 1.2em;
         font-weight: var(--button-weight);
-        }
     }
+
+
+    .carousel{     /* Responsividade do carrosel */
+        height: 600px;
+       
+    }
+    .carousel .container{     
+        width: 1000px;
+        height: 385px;
+       
+    }
+
+    .carousel .container .wraper{  
+        width: 1000px;
+        height: 385px;
+    }
+    
+    .carousel .container .content{ 
+        width: 3000px;
+    }
+
+    .carousel .container img{ 
+        width: 1000px;
+        height: 385px;
+    }
+
+    .carousel .container .textos{      /* Textos*/
+        top: 70px;
+        right: 40px;
+        transform: scale(0.8);
+    }
+
+    .carousel .container .botão{  /* Botões de ver detalhes*/
+        bottom: 50px;
+        right: 80px;
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 1170px) {
+
+    .carousel{     /* Responsividade do carrosel */
+        height: 500px;
+       
+    }
+    .carousel .container{   
+        width: 850px;
+        height: 327px;
+       
+    }
+
+    .carousel .container .wraper{  
+        width: 850px;
+        height: 327px;
+    }
+
+    .carousel .container .content{ 
+        width: 2.550px;
+    }
+
+    .carousel .container img{ 
+        width: 850px;
+        height: 327px;
+    }
+    
+
+    .carousel .container .textos{      /* Textos*/
+        top: 50px;
+        right: 0px;
+        transform: scale(0.7);
+    }
+
+    .carousel .container .botão{  /* Botões de ver detalhes*/
+        bottom: 40px;
+        right: 55px;
+        transform: scale(0.75);
+    }
+}
+
 
 
 @media (max-width: 1024px) {
@@ -741,6 +877,30 @@ header a:hover{
 }
 
 @media (max-width: 1010px) {
+
+    .carousel{     /* Responsividade do carrosel para mobile */
+        height: 950px;
+       
+    }
+
+    .carousel h1{         /* Titulo */
+        padding-bottom: 40px;
+        font-size: 2.4em;
+    }
+
+    .carousel .container{   
+        width: 600px;
+        height: 730px;
+       
+    }
+
+    .carousel .container .balls {      /* Box das bolinhas indicando qual imagem está */
+        margin-bottom: -6%;
+    }
+
+    
+
+    
     .banner .container{
         display: block;
         margin: 0px;
@@ -764,11 +924,11 @@ header a:hover{
         height: 500px;
        }
 
-    .banner .pc{
+    .pc{
     display: none;
     }
 
-    .banner .mobile{
+    .mobile{
     display: block;
     }
 
@@ -794,7 +954,142 @@ header a:hover{
     }
 }
 
+@media (max-width: 900px) {
+    .carousel{     /* Responsividade do carrosel para mobile */
+        height: 750px;
+       
+    }
+
+    .carousel h1{         /* Titulo */
+        padding-bottom: 40px;
+        font-size: 2em;
+    }
+
+    .carousel .container{   
+        width: 400px;
+        height: 487px;
+       
+    }
+
+    .carousel .container .balls {      /* Box das bolinhas indicando qual imagem está */
+        margin-bottom: -8%;
+    }
+
+
+    .carousel .container .wraper-mobile{       /* Container para celular */
+        width: 400px;
+        height: 487px;
+    }
+    
+    
+    .carousel .container .content-mobile{
+        width: 1350px;
+    }
+    
+    .carousel .container .content-mobile .mobImagens{
+        width: 400px;
+        height: 487px;
+    }
+    
+    
+    .carousel .container .content-mobile img{
+        position: absolute;
+        top: 20px;  
+        width: 200px;
+        height: 200px;
+    }
+    
+    
+    .carousel .container .content-mobile .texto {
+        top: 200px;  
+        transform: scale(0.7);
+    }
+    
+    .carousel .container .content-mobile .texto p {
+        max-width: 500px;
+        margin:auto auto 60px auto ;
+      }
+    
+      .carousel .container .content-mobile .button{
+        font-size: 1.7em;
+      }
+
+
+}
+
+@media (max-width: 590px) {
+
+    .background{
+        width: 100vw;
+    }
+    
+    .sidebar{
+        width: 100vw;
+    }
+}
+
 @media (max-width: 500px) {
+
+    .carousel{     /* Responsividade do carrosel para mobile */
+        height: 550px;
+       
+    }
+
+    .carousel h1{         /* Titulo */
+        padding-bottom: 40px;
+        font-size: 1.6em;
+    }
+
+    .carousel .container{   
+        width: 300px;
+        height: 365px;
+       
+    }
+
+    .carousel .container .balls {      /* Box das bolinhas indicando qual imagem está */
+        margin-bottom: -8%;
+    }
+
+
+    .carousel .container .wraper-mobile{       /* Container para celular */
+        width: 300px;
+        height: 365px;
+    }
+    
+    
+    .carousel .container .content-mobile{
+        width: 900px;
+    }
+    
+    .carousel .container .content-mobile .mobImagens{
+        width: 300px;
+        height: 365px;
+    }
+    
+    
+    .carousel .container .content-mobile img{
+        position: absolute;
+        top: 20px;  
+        width: 200px;
+        height: 200px;
+    }
+    
+    
+    .carousel .container .content-mobile .texto {
+        top: 280px;  
+        transform: scale(0.8);
+    }
+    
+    .carousel .container .content-mobile .texto p {
+        display: none;
+    }
+    
+      .carousel .container .content-mobile .button{
+        font-size: 1.7em;
+    }
+
+     /* Responsividade do banner */
+
     .banner .text {  /* Área dos textos */
         width: 400px;
     }
@@ -827,6 +1122,83 @@ header a:hover{
 }
 
 @media (max-width: 400px) {
+
+    .carousel{     /* Responsividade do carrosel para mobile */
+        height: 450px;
+       
+    }
+
+    .carousel h1{         /* Titulo */
+        padding-bottom: 40px;
+        font-size: 1.3em;
+    }
+
+    .carousel .container{   
+        width: 250px;
+        height: 304px;
+       
+    }
+
+    .carousel .container .balls {      /* Box das bolinhas indicando qual imagem está */
+        transform: scale(0.7);
+        margin-bottom: -10%;
+    }
+
+    .carousel .btn{
+        transform: scale(0.7);
+    }
+
+    .carousel .container .btn:hover{
+        transform: scale(0.8);
+    }
+
+    .carousel .container #voltar {    /* Botão de voltar */
+        left: -40px;
+    }
+    
+    .carousel .container #proximo { /* Botão de avançar */
+        right: -40px;
+    }
+
+
+    .carousel .container .wraper-mobile{       /* Container para celular */
+        width: 250px;
+        height: 304px;
+    }
+    
+    
+    .carousel .container .content-mobile{
+        width: 750px;
+    }
+    
+    .carousel .container .content-mobile .mobImagens{
+        width: 250px;
+        height: 304px;
+    }
+    
+    
+    .carousel .container .content-mobile img{
+        position: absolute;
+        top: 20px;  
+        width: 150px;
+        height: 150px;
+    }
+    
+    
+    .carousel .container .content-mobile .texto {
+        top: 220px;  
+        transform: scale(0.7);
+    }
+    
+    .carousel .container .content-mobile .texto p {
+        display: none;
+    }
+    
+    .carousel .container .content-mobile .button{
+        font-size: 1.7em;
+    }
+
+    /* Responsividade do banner */
     .banner .text {  /* Área dos textos */
         width: 300px;
     }
@@ -855,9 +1227,69 @@ header a:hover{
     .banner .button2{
         padding: 10px;
         font-size: 0.7em;
-        }
+    }
 }
-@media (max-width: 300px) {
+@media (max-width: 320px) {
+
+    .theme{
+        display: none;
+    }
+
+    .carousel{     /* Responsividade do carrosel para mobile */
+        height: 400px;
+       
+    }
+
+    .carousel h1{         /* Titulo */
+        padding-bottom: 40px;
+        font-size: 1em;
+    }
+
+    .carousel .container{   
+        width: 200px;
+        height: 243px;
+       
+    }
+
+    .carousel .container .balls {      /* Box das bolinhas indicando qual imagem está */
+        transform: scale(0.7);
+        margin-bottom: -10%;
+    }
+
+    .carousel .container .wraper-mobile{       /* Container para celular */
+        width: 200px;
+        height: 243px;
+    }
+    
+    
+    .carousel .container .content-mobile{
+        width: 600px;
+    }
+    
+    .carousel .container .content-mobile .mobImagens{
+        width: 200px;
+        height: 243px;
+    }
+    
+    
+    .carousel .container .content-mobile img{
+        position: absolute;
+        top: 20px;  
+        width: 140px;
+        height: 140px;
+    }
+    
+    
+    .carousel .container .content-mobile .texto {
+        top: 190px;  
+        transform: scale(0.7);
+    }
+    
+    .carousel .container .content-mobile .button{
+        font-size: 1.2em;
+    }
+
+    /* Responsividade	 do banner */
     .banner .text {  /* Área dos textos */
         width: 200px;
     }
@@ -890,21 +1322,4 @@ header a:hover{
         }
 }
 
-@media (max-width: 590px) {
-
-    .background{
-        width: 100vw;
-    }
-    
-    .sidebar{
-        width: 100vw;
-    }
-}
-
-@media (max-width: 220px) {
-
-    .theme{
-        display: none;
-    }
-}
 

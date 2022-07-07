@@ -1,0 +1,114 @@
+/* Sessão Produtos*/
+
+.produtos {
+    background-color: var(--inverted-color);
+    width: 100%;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.575);
+  }
+
+  .produtos h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: var(--font-size-subtittle);
+    color: var(--normal-color);
+  }
+
+  .produtos .containers{
+   display: flex;
+   justify-content: space-between;
+   flex: none;
+   overflow: hidden;
+
+
+  }
+
+  /* Box do protuto */
+  .produtos .container{
+    background-color: var(--normal-color);
+    width: 600px;
+    height: 780px;
+    margin: 100px;
+    border-radius: 50px;
+    clear: both;
+
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.575);
+   
+  }
+
+  .produtos .container .img{
+    position: relative;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%);  
+    width: 400px;
+    height: 400px;
+
+    background-image: url(../img/produtos/Almofada.png);
+    background-position: fixed;
+    background-size: 100%;
+    border-radius: 50px;
+  }
+
+  .produtos .container .img2{
+    position: relative;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%);  
+    width: 400px;
+    height: 400px;
+
+    background-image: url(../img/produtos/Moletom.png);
+    background-position: fixed;
+    background-size: 100%;
+    border-radius: 50px;
+  }
+
+
+
+  .produtos .container .texto {
+    margin-top: 80px ;
+    text-align: center;
+    color: var(--inverted-color);
+    font-size: var(--font-normal);
+    font-weight: var(--button-weight);
+  }
+
+  .produtos .container .texto p {
+    max-width: 450px;
+    margin:auto auto 50px auto ;
+    font-size: var(--font-size-p);
+    
+  }
+
+  /* button*/
+  .produtos .container .button{
+    
+    text-align: center;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 2em;
+    color: var(--inverted-color);
+    font-weight: var(--button-weight);
+    background:linear-gradient(to right, #946CE9, #CB6EC9);
+    border-radius: 10px;
+    position: relative;
+  }
+  
+
+  .produtos .container .button::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background-color: var(--normal-color);
+    border-radius:10px;
+    margin:1px;
+  }
+
+  .produtos .container .button span{
+    position: relative;
+    z-index: 1;
+}
+
+.produtos .container .button:hover{
+    box-shadow: 0 0 20px var(--cor6);
+   }
