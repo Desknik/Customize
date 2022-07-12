@@ -54,11 +54,42 @@ html[data-theme="dark"] {
     
   }
 
+  header .img{
+    width: 40vh;
+    height: 15vh;
+    max-width: 100vh;
+    background-image: var(--background-image-black);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+
+header nav{
+    display: flex;
+    justify-content: space-around;
+    gap: 5vh;
+   
+
+}
+
+header .menu{
+    display: flex;
+    justify-content: space-around;
+    gap: 2vh;
+}
+
+header .icons{
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+
+}
 
 main .title{  /*titulo*/
  display: block;
  text-align: center;
- font-size: 2.8vw;
+ font-size: 3em;
  padding: 30px 0px ;
  margin: 30px 0px 0px 0px;
  color: var(--cor6);
@@ -70,40 +101,31 @@ main .title{  /*titulo*/
 /* Container envolvendo tudo */
 main .container{
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
 } 
-
-
-  
 
 
   /* Box dos Formularios */
 .form{
     position: relative;
-    left: 2vw;
-    width: 50vw;
-    max-width: 50vh;
-    min-height: 50vh;
-    padding: 5vh;
-    border-radius: 2.5vh;
+    width: 500px;
+    padding: 50px;
     border: none;
 }
 
 
 .form h1{  /* Titulo */
-  font-size: 4.5vh;
-  margin-bottom: 3vh;
+  font-size: 2.5em;
+  margin-bottom: 50px;
   color: var(--normal-color);
 }
 
 /* Formulario */
 .form_label{    /* box dos inputs */
   display: block;
-  width: 80%;
-  margin-bottom: 2vh;
+  margin-bottom: 20px;
   position: relative;
-  padding: 1vh 1vh;
+  padding: 10px 10px;
   border-bottom: solid var(--cor6);
 }
 
@@ -112,7 +134,7 @@ main .container{
   background-color: var(--inverted-color);
   border: none;
   outline: none;
-  font-size: 2vh;
+  font-size: 20px;
   color: var(--normal-color);
   font-weight: 600;
 }
@@ -122,7 +144,7 @@ main .container{
   top: 50%;
   left: 5px;
   transform: translateY(-50%);
-  font-size: 2vh;
+  font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--normal-color);
@@ -135,10 +157,10 @@ main .container{
 
 .form_label .focus{   /* Animação do placeholder quando está ativa  */
   top:0;
-  font-size: 1.3vh;
+  font-size: 13px;
   color: var(--normal-color);
-  border-left: 0.4vh solid var(--cor8);
-  padding-left: 0.2vh;
+  border-left: 4px solid var(--cor8);
+  padding-left: 2px;
 
 }
 
@@ -146,7 +168,7 @@ main .container{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 1vh;
+  right: 10px;
   color: var(--cor8);
   cursor: pointer;
   opacity: 0.7;
@@ -165,14 +187,14 @@ main .container{
 
 .form button{  /*  Botão */
   display: block;
-  padding: 1vh 5vh;
-  margin-top: 8vh;
+  padding: 10px 50px;
+  margin-top: 80px;
   text-decoration: none;
-  font-size: 3vh;
+  font-size: 30px;
   color: var(--cor6);
   font-weight: var(--button-weight);
   background-image: linear-gradient(to left, #8c59fa, #e741e5 );
-  border-radius: 1vh;
+  border-radius: 10px;
   position: relative;
   cursor: pointer;
   border: none;
@@ -187,9 +209,9 @@ main .container{
 .form button:before{   /* Gambiarra pra ficar com borda com gradiente  */
   content: '';
   position: absolute;
-  inset: 0.3vh;
+  inset: 3px;
   background-color: var(--inverted-color);
-  border-radius: 1vh;
+  border-radius: 1px;
 }
 
 .form button span{  /* Texto do botão  */
@@ -206,7 +228,6 @@ main .container{
 .form .link {  
   position: relative;
   display: flex;
-  width: 82%;;
   padding: 5px;
 }
 
@@ -215,7 +236,7 @@ main .container{
   right: 3px;
   bottom: 0px;
   color: var(--normal-color);
-  font-size: 1vw;
+  font-size: 1em;
   }
 
   .form .link a:hover{  /* textos */
@@ -223,10 +244,6 @@ main .container{
     opacity: 0.8;
     }
   
-
-
-
-
 
 
 @media (max-width: 860px) {
@@ -250,6 +267,94 @@ main .container{
       background-size: 100%;
   }
 }
+
+@media (max-width: 500px){
+
+  main .title{  /*titulo*/
+    font-size: 2.2em;
+   } 
+   
+     /* Box dos Formularios */
+   .form{
+       width: 400px;
+       padding: 30px;
+   }
+   
+   
+   .form h1{  /* Titulo */
+     font-size: 2em;
+     margin-bottom: 40px;
+   }
+   
+  
+   /* Botões */
+   
+   .form button{  /*  Botão */
+     padding: 10px 50px;
+     margin-top: 80px;
+     font-size: 30px;  
+   }
+
+   .form .link a{  /* textos */
+     position: absolute;
+     right: 3px;
+     bottom: 0px;
+     color: var(--normal-color);
+     font-size: 1em;
+     }
+}
+
+@media (max-width: 400px){
+
+  main .title{  /*titulo*/
+    font-size: 1.8em;
+   } 
+   
+     /* Box dos Formularios */
+   .form{
+       width: 300px;
+       padding: 20px;
+   }
+   
+   .form h1{  /* Titulo */
+     font-size: 1.8em;
+     margin-bottom: 40px;
+   }
+   
+  
+   /* Botões */
+   
+   .form button{  /*  Botão */
+    width: 100%;
+    font-size: 20px;  
+   }
+}
+
+@media (max-width: 320px) {
+
+  .theme{
+      display: block;
+  }
+}
+
+@media (max-width: 300px) {
+
+main .title{  /*titulo*/
+  font-size: 1.4em;
+ } 
+ 
+   /* Box dos Formularios */
+ .form{
+     width: 200px;
+     padding: 20px;
+ }
+
+ .form .form_label span{
+  display: none;
+ }
+}
+
+
 
 
 
