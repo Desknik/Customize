@@ -594,6 +594,27 @@ header a:hover{
     right: 150px;
 }
 
+.carousel .container .textos-two{      /* Imagens do carrosel invertidas*/
+    position: absolute;
+    top: 110px;
+    left: 140px;
+
+    width: 530px;
+    height: 210px ;
+}
+
+.carousel .container .textos-two p{
+    color: var(--inverted-color);
+    font-size: 1.7em;
+}
+
+.carousel .container .botão-two{  /* Botões de ver detalhes*/
+
+    position: absolute;
+    bottom: 50px;
+    left: 150px;
+}
+
 .carousel .container .button{
     position: relative;
     padding: 15px 30px;
@@ -821,6 +842,18 @@ header a:hover{
         right: 80px;
         transform: scale(0.8);
     }
+
+    .carousel .container .textos-two{      /* Textos*/
+        top: 70px;
+        left: 60px;
+        transform: scale(0.8);
+    }
+
+    .carousel .container .botão-two{  /* Botões de ver detalhes*/
+        bottom: 50px;
+        left: 80px;
+        transform: scale(0.8);
+    }
 }
 
 @media (max-width: 1170px) {
@@ -859,6 +892,18 @@ header a:hover{
     .carousel .container .botão{  /* Botões de ver detalhes*/
         bottom: 40px;
         right: 55px;
+        transform: scale(0.75);
+    }
+
+    .carousel .container .textos-two{      /* Textos*/
+        top: 50px;
+        left: 15px;
+        transform: scale(0.7);
+    }
+
+    .carousel .container .botão-two{  /* Botões de ver detalhes*/
+        bottom: 40px;
+        left: 55px;
         transform: scale(0.75);
     }
 }

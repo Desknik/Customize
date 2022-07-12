@@ -56,10 +56,10 @@ function slide(){
 }
 
 setInterval(() => {
-   if (rolar){
-    atual++
-    slide()
-   }else{
-    rolar = true
-   }
-}, 4000);
+    if (rolar){
+     atual++
+     slide()
+    }else{
+     rolar = true
+    }
+ }, 4000);
