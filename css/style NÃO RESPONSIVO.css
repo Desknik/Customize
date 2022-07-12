@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2? family= PT+Sans+Narrow & display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: var(--font-normal) ;
+}
+
+:root{
+    --cor1:#1b1b1b;
+    --cor2:#1EA5E9;
+    --cor3:#E71D36;
+    --cor4:#F7B801;
+    --cor5:#F8F0FB; 
+    --cor6:#946CE9;
+    --cor7:#8c59fa ;
+    --cor8:#e741e5 ;
+
+    --font-nav: 'Pacifico', cursive;
+    --font-normal: 'Montserrat', sans-serif;
+  
+    --font-size-titte: clamp( 3rem, 10vw + 0.1rem, 5rem);
+    --font-size-subtittle: clamp( 2.4rem, 5vw + 0.1rem, 3rem);
+    --font-size-normal: clamp( 1.2rem, 3vw + 0.1rem, 2rem);
+    --font-size-p:25px;
+    --button-weight: 600;
+}
+
+/* Tema padrão*/
+html{
+    --background-image-black: url(../img/logo/Logo-+-escrita-Black.png);
+    --header-color: #1b1b1b;
+     --main-color:#1B1B1B;
+
+    --normal-color:var(--cor1);
+    --inverted-color:var(--cor5);
+
+    --text-color:var(--cor5);
+
+    
+    --button-text:var(--cor1);
+  
+    
+}
+
+/* Tema Noturno*/
+html[data-theme="dark"] {
+    --background-image-black: url(../img/logo/Logo-All-White.png); 
+    --header-color: #1b1b1b;
+    --main-color:var(--cor5);
+
+    --normal-color: var(--cor5);
+    --inverted-color: var(--header-color);
+   
+    --text-color:var(--cor1);
+    --button-text:var(--cor5);
+    
+    
+    
+    
+  }
+
+  /* Personalização da barra de scroll */ 
+
+html::-webkit-scrollbar{
+   width: 1.5vh;
+
+}
+
+::-webkit-scrollbar-track-piece{
+    display: none;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--header-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent, #946CE9, #CB6EC9);
+   
+    border-radius: 20px;
+}
+
+
+/* Body*/
+
+body{
+    background-color: var(--main-color);
+    width: 100vw;
+
+    
+}
+/* Header*/
+
+header{
+    width: 100vw;
+    height: 13.4vh;
+    max-height: 20vh;
+    background-color: var(--header-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0.1vh 0.1vh 1vh 0.5vh var(--cor6);
+}
+
+
+header .img{
+    width: 40vh;
+    height: 15vh;
+    max-width: 100vh;
+    background-image: var(--background-image-black);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+
+header nav{
+    display: flex;
+    justify-content: space-around;
+    gap: 5vh;
+   
+
+}
+
+header .menu{
+    display: flex;
+    justify-content: space-around;
+    gap: 2vh;
+}
+
+header .icons{
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+
+}
+
+header a{
+    color: var(--cor5);   
+    font-size: 3.2vh; 
+    font-family: var(--font-nav);
+    font-weight: normal;
+}
+
+header a:hover{
+    color: var(--cor6);
+}
+
+/* Personalização do checkbox */
+.theme{
+    margin-left: 1.5vh;
+}
+.theme .checkbox{
+    opacity: 0;
+    position: absolute;
+    
+}
+
+.theme .label{
+    background-color: var(--cor5);
+    border-radius: 5vh;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    gap: 1.2vh;
+    
+    padding: 0.5vh;
+    position: relative;
+    height: 2vh;
+    width: 4.5vh;
+    transform: scale(1.5);
+    font-size: 1.6vh;
+}
+
+
+.theme .label .ball{
+    background-color: var(--cor1);
+    border-radius: 50%;
+    position: absolute;
+
+    top: 0.4vh;
+    left: 0.3vh;
+
+    height: 2.2vh;
+    width: 2.2vh;
+
+    transform: translateX(0vh);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(2.8vh);
+
+}
+
+
+
+/* Banenr */ 
+main .banner{
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+    
+}
+.banner .container{
+    display: flex;
+    justify-content: space-between; 
+    padding: 50px;
+}
+.banner .text {
+    display: block;
+    position: relative;
+    left: 20px;
+    top: 25%;
+    color: var(--text-color);
+    width: 1000px;
+}
+
+.banner .text h1{
+    font-size: var(--font-size-titte);  
+}
+.banner .container .text p{
+    padding-top: 10px;
+    padding-bottom: 40px;
+    font-size: var(--font-size-normal);
+}
+
+/*botões */
+.banner .container .button {
+    margin-top: 40px;
+  }
+
+.banner .container .button1{
+    padding: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 2em;
+    color: var(--cor6);
+    font-weight: var(--button-weight);
+    background-image: linear-gradient(to left, #8c59fa, #e741e5 );
+    border-radius: 5px;
+    margin-right: 50px;
+    position: relative;
+  }
+  
+.banner .container .button2{
+    padding: 20px;
+    text-decoration: none;
+    font-size: 2em;
+    color: var(--inverted-color);
+    font-weight: var(--button-weight);
+    background-color: var(--inverted-color);
+    border-radius: 5px;
+    position: relative;
+  }
+
+  /* pers. dos botões */
+
+.banner .container .button1:hover{
+    letter-spacing: 0.15em;
+    box-shadow: 0 0 25px var(--cor6);
+   }
+
+.banner .container .button2:hover{
+    letter-spacing: 0.15em;
+    box-shadow: 0 0 15px var(--inverted-color);
+}
+
+   
+.banner .container .button1:before{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background-color: var(--normal-color);
+    border-radius: 5px;
+}
+
+.banner .container .button2:before{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background-color: var(--normal-color);
+    border-radius: 5px;
+}
+
+.banner .container .button1 span, .banner .container .button2 span{
+    position: relative;
+    z-index: 1;
+}
+/* Carrosel */
+
+.carousel{
+    position: relative;
+    width: 100vw;
+    height: 700px;
+   
+    background-color: var(--inverted-color);
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.575);
+    
+}
+
+.carousel h1{
+    text-align: center;
+    padding: 40px;
+    font-size: var(--font-size-subtittle);
+    color: var(--normal-color);
+      
+}
+
+
+.carousel .container{
+    position: relative;
+    margin: auto;
+    width: 1300px;
+    height: 500px;
+
+    border-radius: 50px;
+    background-color: var(--normal-color);
+    background-image: url(../img/banners/Moletom.png);
+    box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.575);
+   
+  }
+
+  /* textos*/
+  .carousel .container .textos{
+    position: absolute;
+    top: 110px;
+    right: 140px;
+    
+    width: 530px;
+    height: 210px ;
+   }
+
+   .carousel .container .textos p{
+    color: var(--inverted-color);
+    font-size: 1.7em;
+   }
+
+
+   /* botões*/
+
+   .carousel .container .botão{
+    position: absolute;
+    bottom: 50px;
+    right: 150px;
+   }
+
+   .carousel .container .button{
+    position: relative;
+    padding: 15px 30px;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: var(--button-weight);
+
+    color: var(--inverted-color);
+    background:linear-gradient(to right, #946CE9, #CB6EC9);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+  }
+  
+
+  .carousel .container .button::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background-color: var(--normal-color);
+    border-radius:10px;
+    margin:1px;
+  }
+
+  .carousel .container .button span{
+    position: relative;
+    z-index: 1;
+    color: var(--inverted-color);
+}
+
+.carousel .container .button:hover{
+    box-shadow: 0 0 20px var(--cor6);
+   }
+
+
+
+
+  /* footer*/
+
+  footer{
+    background-color: var(--normal-color);
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.575);
+    position: relative;
+}
+
+footer h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--inverted-color);
+    font-size: var(--font-size-subtittle);
+    padding: 30px;
+}
+
+footer .content{
+    display: flex;
+    justify-content: center;
+}
+
+footer .boxes{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    
+}
+
+ /* left box*/
+footer .content .left-box{
+    display: flex;
+    flex-direction: column;
+    width: 480px;;
+    padding: 20px;
+}
+
+footer .content h2{
+    margin-bottom: 10px;
+    border-bottom: 3px solid var(--cor6);
+    color: var(--inverted-color);
+    font-size: var(--font-size-normal);
+
+}
+
+
+
+.content .left-box span{
+    margin-top: 15px;
+    font-size: 1.3em;
+    color: var(--inverted-color);
+    
+}
+
+.content .left-box .social{
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   margin-top: 90px;
+  
+}
+
+.content .left-box .social a{
+    text-decoration: none;
+    color: var(--inverted-color);
+   
+ }
+
+
+ /* right box*/
+.content .right-box{
+    padding: 20px;
+    width: 480px;
+
+}
+
+.content .right-box span{
+    margin-bottom: 5px;
+    color: var(--inverted-color);
+    width: 200px;
+    
+    
+}
+
+.content .right-box .container{
+   display: flex;
+   gap: 30px;
+
+}
+
+.content .right-box .container .name{
+    display: flex;
+    flex-direction: column;
+ 
+ }
+
+ .content .right-box .container .email{
+    display: flex;
+    flex-direction: column;
+ 
+ }
+.content .right-box form{
+    display: flex;
+    flex-direction: column;
+}
+
+.content .right-box input{
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 1.08em;
+}
+
+.content .right-box textarea{
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1.08em;
+}
+
+/* button */
+.content .right-box form button{
+    background-image: linear-gradient(to right, #946CE9, #CB6EC9);
+    color: var(--cor5);
+    font-size: 1.5em;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    position:relative;
+    cursor: pointer;
+}
+
+
+.content .right-box form button:before{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background-color: var(--normal-color);
+    border-radius: 5px;
+}
+
+.content .right-box form button span{
+    position: relative;
+    z-index: 1;
+}
+
+.content .right-box form button:hover{
+    box-shadow: 0 0 15px var(--cor6);
+   }
+
+/* */
+
+
+footer .copy{
+    text-align: center;
+    padding: 15px;
+    margin: 30px auto auto auto;
+    color: var(--inverted-color);
+    background-color: rgba(0, 0, 0, 0.288);
+  
+
+}
+
+footer .copy span{
+    color: var(--normal-color);
+    opacity: 80%;
+}
+
+
+
+@media (max-width: 700px) {
+
+    html{
+        --background-image-black: url(../img/logo/Logo-Black.png); 
+    }
+    
+    /* Tema Noturno*/
+    html[data-theme="dark"] {
+        --background-image-black: url(../img/logo/Logo-White.png); 
+      }
+    
+      header .img{
+        width: 10vh;
+        height: 10vh;
+        max-width: 100vh;
+        background-image: var(--background-image-black);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+    }
+    
+  }

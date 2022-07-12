@@ -48,7 +48,39 @@ html[data-theme="dark"] {
     --button-text:var(--cor5);
     
     
-  }
+}
+header .img{
+    width: 40vh;
+    height: 15vh;
+    max-width: 100vh;
+    background-image: var(--background-image-black);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+
+header nav{
+    display: flex;
+    justify-content: space-around;
+    gap: 5vh;
+   
+
+}
+
+header .menu{
+    display: flex;
+    justify-content: space-around;
+    gap: 2vh;
+}
+
+header .icons{
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+
+}
+
 
 main{
     width: 100vw;
@@ -284,6 +316,12 @@ main .titulo{
     }
   }
 
+@media (max-width: 320px) {
+
+    .theme{
+        display: block;
+    }
+}
   
   
 
