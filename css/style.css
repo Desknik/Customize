@@ -801,6 +801,7 @@ footer .content .right-box form{    /* Formulario*/
 
 footer .content .right-box input{  /* Estilização dos inputs*/
     padding: 8px;
+    border: none;
     border-radius: 5px; 
     font-size: 1em;
     width: 215px;
@@ -829,6 +830,7 @@ footer .content .right-box .container{   /*Box envolvendo o nome e o email do fo
 
 footer .content .right-box textarea{   /*Text area da mensagem*/
     padding: 8px;
+    border: none;
     border-radius: 5px;
     margin-bottom: 20px;
     font-size: 1.08em;
