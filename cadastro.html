@@ -57,27 +57,27 @@
 
           <div class="form">
             <h1>Cadaste-se</h1>
-            <form action="" method="post">
+            <form action="" method="post" autocomplete="on">
 
             <div class="form_label">
                 <label for="username" class="placeholder">Usuário</label>
-                <input type="text" name="username" id="username" class="input" maxlength="40" onfocus="placeholder1()" onblur="placeholderout1()" onchange="togglebuttoncad()" required>
+                <input type="text" name="username" id="username" class="input" autocomplete="username" maxlength="40" onfocus="placeholder1()" onblur="placeholderout1()" onchange="togglebuttoncad()" required>
             </div> 
 
             <div class="form_label">
                 <label for="email" class="placeholder">Email</label>
-                <input type="email" name="email" id="email" class="input" onfocus="placeholder2()" onblur="placeholderout2()" onchange="togglebuttoncad()" required>
+                <input type="email" name="email" id="email" class="input" autocomplete="email" onfocus="placeholder2()" onblur="placeholderout2()" onchange="togglebuttoncad()" required>
             </div>
 
             <div class="form_label">
                 <label for="senha" class="placeholder">Senha</label>
-                <input type="password" name="senha" id="password" class="input" onfocus="placeholder3()" onblur="placeholderout3()" onchange="togglebuttoncad()" required>
+                <input type="password" name="senha" id="password" maxlength="40" minlength="8" autocomplete="new-password" class="input" onfocus="placeholder3()" onblur="placeholderout3()" onchange="togglebuttoncad()" required>
                 <label for="password" class="showPass disabled" onclick="pass()"><i class="fa-regular fa-eye"></i></label>
             </div>
 
             <div class="form_label">
                 <label for="senha" class="placeholder">Confirme <span>a Senha</span></label>
-                <input type="password" name="passwordconfirm" id="passwordconfirm" class="input" onfocus="placeholder4()" onblur="placeholderout4()" onchange="togglebuttoncad()" required>
+                <input type="password" name="passwordconfirm" id="passwordconfirm" maxlength="40" minlength="8" autocomplete="new-password" class="input" onfocus="placeholder4()" onblur="placeholderout4()" onchange="togglebuttoncad()" required>
                 <label for="passwordconfirm" class="showPass disabled" onclick="passconfirm()"><i class="fa-regular fa-eye"></i></label>
             </div>
 

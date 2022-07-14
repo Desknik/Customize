@@ -464,6 +464,7 @@ header a:hover{
     position: relative;
    
     background-color: var(--inverted-color);
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.575);
 }
 
 .carousel h1{         /* Titulo */
@@ -710,10 +711,55 @@ header a:hover{
     font-size: 1.7em;
   }
 
+/* Como funciona */ 
+
+#Como_funciona{ 
+    width: 100%;
+    padding: 30px;
+    position: relative;
+   
+    background-color: var(--normal-color); 
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.575);
+}
+
+#Como_funciona h1{         /* Titulo */
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 3em;
+    color: var(--inverted-color);
+}
+
+#Como_funciona .fotos_pc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Como_funciona .fotos_pc img{
+    width: 100%;
+    max-width: 1500px;
+}
+
+#Como_funciona .fotos_mobile{
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 50px;
+}
+
+#Como_funciona .fotos_mobile img{
+    width: 100%;
+    max-width: 700px;
+    padding-right: 20px;
+}
+
  /* footer*/
 
 footer{
-    background-color: var(--normal-color);
+    background-color: var(--inverted-color);
     box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.575);
     position: relative;
 }
@@ -721,7 +767,7 @@ footer{
 footer h1{                     /*Titulo */
     text-align: center;
     margin-bottom: 20px;
-    color: var(--inverted-color);
+    color: var(--normal-color);
     font-size: 3em;
     padding: 30px;
 }
@@ -729,7 +775,7 @@ footer h1{                     /*Titulo */
 footer .content h2{           /*Sub-titulos*/
     margin-bottom: 10px;
     border-bottom: 3px solid var(--cor6);
-    color: var(--inverted-color);
+    color: var(--normal-color);
     font-size: 2em;
 
 }
@@ -759,7 +805,7 @@ footer .content .left-box{     /*Box da esquerda*/
 footer .content .left-box span{      /*informações de contatos */
     margin-top: 15px;
     font-size: 1.3em;
-    color: var(--inverted-color);
+    color: var(--normal-color);
     
 }
 
@@ -773,7 +819,7 @@ footer .content .left-box .social{    /*icones de redes sociais */
  
 footer .content .left-box .social a{    /* textos dos icones */
     text-decoration: none;
-    color: var(--inverted-color);
+    color: var(--normal-color);
    
  }
 
@@ -788,7 +834,7 @@ footer .content .right-box{   /*Box da direita */
 
 footer .content .right-box span{      /*Box da direita */
     margin-bottom: 5px;
-    color: var(--inverted-color);
+    color: var(--normal-color);
     width: 200px;
     
     
@@ -852,7 +898,7 @@ footer .content .right-box form button:before{
     content: '';
     position: absolute;
     inset: 4px;
-    background-color: var(--normal-color);
+    background-color: var(--inverted-color);
     border-radius: 5px;
 }
 
@@ -873,7 +919,7 @@ footer .copy{            /*Área do copyright*/
     text-align: center;
     padding: 15px;
     margin: 30px auto auto auto;
-    color: var(--inverted-color);
+    color: var(--normal-color);
     background-color: rgba(0, 0, 0, 0.288);
   
 
@@ -1176,6 +1222,17 @@ footer .copy span{
         margin-bottom: -6%;
     }
 
+    /* Responsividade do Como Funciona*/
+    #Como_funciona .fotos_pc{
+        display:none;
+    }
+
+    #Como_funciona .fotos_mobile{
+        display:flex;
+    }
+
+
+
      /* Responsividade do footer*/
     footer .boxes{                       /*div envolvendo as boxes da esquerda e da direita */
         display: flex;
@@ -1388,9 +1445,6 @@ footer .copy span{
 
     /* Responsividade do footer*/
     footer{
-        background-color: var(--normal-color);
-        box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.575);
-        position: relative;
         height: 680px;
     }
     
@@ -1523,11 +1577,14 @@ footer .copy span{
         font-size: 1.7em;
     }
 
+    /* Responsividade do como funciona*/
+    #Como_funciona h1{
+        padding: 20px 0px;
+        font-size: 2em;
+    }
+
     /* Responsividade do footer*/
     footer{
-        background-color: var(--normal-color);
-        box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.575);
-        position: relative;
         height: 560px;
     }
     
@@ -1646,9 +1703,6 @@ footer .copy span{
 
     /* Responsividade do footer*/
     footer{
-        background-color: var(--normal-color);
-        box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.575);
-        position: relative;
         height: 480px;
     }
 
