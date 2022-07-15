@@ -736,9 +736,47 @@ header a:hover{
     align-items: center;
 }
 
-#Como_funciona .fotos_pc img{
+#Como_funciona .fotos_pc svg{   /* Estilização do Sgv para pc*/
     width: 100%;
     max-width: 1500px;
+}
+
+#Como_funciona .fotos_pc svg .cls-1{
+    fill: var(--inverted-color);
+}
+
+#Como_funciona .fotos_pc svg .Pc .cls-1{
+    fill: var(--inverted-color);
+}
+
+#Como_funciona .fotos_pc svg .Pc .cls-2{
+    fill: var(--normal-color);
+}
+
+#Como_funciona .fotos_pc svg .Pc .cls-3{
+    fill: var(--normal-color);
+    font-weight: 600;
+}
+
+#Como_funciona .fotos_pc svg .Pc .cls-4{
+    fill: var(--normal-color);
+}
+
+#Como_funciona .fotos_pc svg .Pc .cls-5{
+    stroke: var(--normal-color);
+}
+
+#Como_funciona .fotos_pc svg circle{
+    fill: var(--inverted-color);
+}
+
+#Como_funciona .fotos_pc svg .texto{
+    font-weight: 600;
+}
+
+#Como_funciona .fotos_pc svg text{
+    fill: var(--normal-color);
+    font-weight: 400;
 }
 
 #Como_funciona .fotos_mobile{
@@ -750,11 +788,28 @@ header a:hover{
     gap: 50px;
 }
 
-#Como_funciona .fotos_mobile img{
+#Como_funciona .fotos_mobile svg{        /* Estilização do Sgv para Mobile*/
     width: 100%;
     max-width: 700px;
     padding-right: 20px;
 }
+
+#Como_funciona svg .Inverted{     
+    fill: var(--inverted-color);
+}
+
+#Como_funciona svg .Normal{    
+    fill: var(--normal-color);
+}
+
+#Como_funciona svg .Base{   
+    stroke: var(--normal-color);
+}
+
+
+
+
+
 
  /* footer*/
 
