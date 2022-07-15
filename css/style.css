@@ -1530,16 +1530,20 @@ footer .copy span{
     }
 
     .banner .text h1{
+        padding-left: 0;
         font-size: 2.3em;  
     }
     .banner .text p{
+        padding-left: 0;
         font-size: 1.3em;
     }
     
     .banner img{
+        padding: 0;
         width: 300px;
         height: 300px;
        }
+       
 
     .banner .button {
         margin: 50px 12px;
