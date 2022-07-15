@@ -1392,12 +1392,15 @@ footer .copy span{
 
     .banner .text h1{
         font-size: 3em;  
+        padding-left: 10px;
     }
     .banner .text p{
         font-size: 1.6em;
+        padding-left: 10px;
     }
     
     .banner img{
+        padding: 10px;
         width: 400px;
         height: 400px;
        }
@@ -1408,12 +1411,12 @@ footer .copy span{
     .banner .button1{
         margin-right: 30px;
         padding: 15px; 
-        font-size: 1.1em;
+        font-size: 1em;
     }
     
     .banner .button2{
         padding: 15px;
-        font-size: 1.1em;
+        font-size: 1em;
         }
 
     .banner .button1:hover{
