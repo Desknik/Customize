@@ -1406,17 +1406,17 @@ footer .copy span{
        }
 
     .banner .button {
-        margin: 50px 20px;
+        margin: 50px 15px;
     }
     .banner .button1{
-        margin-right: 20px;
+        margin-right: 15px;
         padding: 15px; 
-        font-size: 1em;
+        font-size: 0.9em;
     }
     
     .banner .button2{
         padding: 15px;
-        font-size: 1em;
+        font-size: 0.9em;
         }
 
     .banner .button1:hover{
