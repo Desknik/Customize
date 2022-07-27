@@ -12,7 +12,6 @@
     <script src="js/theme-script.js" defer></script>
     <script src="js/hamburguer-menu.js"></script>
     <script src="js/carousel.js" defer></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
 
 
     <script>
@@ -27,7 +26,7 @@
         }
         let theme = localStorage.getItem('data-theme');
         if (theme == 'dark') changeThemeToDark();
-      </script>
+    </script>
 </head>
 <body>
     <header id="main">
@@ -2191,7 +2190,9 @@
                         </div>
                         <span>Mensagem</span>
                         <textarea cols="25" rows="3" name="message" placeholder="Escreva sua mensagem aqui" required></textarea> 
-                        <input type="hidden" name="_captcha" value="false">                               
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://desknik.github.io/Customize/success.html">
+                        <input type="hidden" name="_cc" value="desknik@hotmail.com">                               
                         <button type="submit "><span>Enviar</span></button> 
                     </form>
                 </div>
