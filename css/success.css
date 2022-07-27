@@ -9,12 +9,6 @@ body{
 }
 
 main{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
     font-family: 'Montserrat', sans-serif; 
     text-decoration: none;
 }
@@ -73,6 +67,26 @@ button span{
 
 button:hover{
     box-shadow: 0 0 15px var(--cor6);
+}
+
+main .texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: delay 1s linear;
+    align-items: center;
+}
+
+@keyframes delay{
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 section .wave{
@@ -156,7 +170,6 @@ section .wave.wave4{
     button{     
         font-size: 1em;
 }
-
 @media (max-width: 320px) {
 
     h1{
