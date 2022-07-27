@@ -2182,15 +2182,16 @@
                         <div class="container">
                             <div class="name">
                                 <span>Nome</span>
-                                <input type="text" placeholder="Seu nome" required>
+                                <input type="text" name="name" placeholder="Seu nome" required>
                             </div>
                             <div class="email">
                                 <span>Email</span>
-                                <input type="email" placeholder="Exemplo@gmail.com" required>
+                                <input type="email" name="email" placeholder="Exemplo@gmail.com" required>
                             </div>
                         </div>
                         <span>Mensagem</span>
-                        <textarea cols="25" rows="3" placeholder="Escreva sua mensagem aqui" required></textarea>                                
+                        <textarea cols="25" rows="3" name="message" placeholder="Escreva sua mensagem aqui" required></textarea> 
+                        <input type="hidden" name="_captcha" value="false">                               
                         <button type="submit "><span>Enviar</span></button> 
                     </form>
                 </div>
