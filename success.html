@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Customize</title>
+    <title>Mensagem enviada!</title>
     
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
     <link rel="shortcut icon" href="img/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/success.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/theme-script.js" defer></script>
+    <script src="../js/loading.js" defer></script>
+    
     <script>
         const changeThemeToDark = () => {
             document.documentElement.setAttribute("data-theme", "dark");
@@ -26,6 +28,14 @@
     </script>
 </head>
 <body>
+    <section id="loading" class="hidden">
+        <div class="logo"><img src="../img/logo/Logo-Black.png" alt=""></div>
+        <div class="pulse">
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+        </div>
+    </section>
     <header id="main">
         <input type="checkbox" class="checkbox" name="toggle-dark" id="toggle-dark">
         <label class="label" for="toggle-dark">

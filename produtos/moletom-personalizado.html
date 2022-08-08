@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Personalize | Moletom</title>
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="shortcut icon" href="../img/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/produto.css">
+    <script src="../js/theme-script.js" defer></script>
+    <script src="../js/modals.js" defer></script>
+    <script src="../js/loading.js" defer></script>
+
+
+    <script>
+        const changeThemeToDark = () => {
+            document.documentElement.setAttribute("data-theme", "dark");
+            localStorage.setItem("data-theme", "dark");
+        }
+
+        const changeThemeToLight = () => {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("data-theme", 'light');
+        }
+        let theme = localStorage.getItem('data-theme');
+        if (theme == 'dark') changeThemeToDark();
+    </script>
+</head>
+
+<body>
+    <section id="loading" class="hidden">
+        <div class="logo"><img src="../img/logo/Logo-Black.png" alt=""></div>
+        <div class="pulse">
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+        </div>
+    </section>
+
+    <header id="main">
+        <a href="../index.html">
+            <div class="img"></div>
+        </a>
+
+        <div class="icones">
+            <ul class="icons">
+                <li><a href="#"><i class="fa-regular fa-cart-shopping"></i></a></li>
+                <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+            <div class="theme">
+                <input type="checkbox" class="checkbox" name="toggle-dark" id="toggle-dark">
+                <label class="label" for="toggle-dark">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <!--            -->
+
+    <main>
+        <section class="produto">
+            <div class="imagem">
+                <div class="img">
+                    <img src="../img/produtos/Moletom.png" alt="Moletom Branco">
+                </div>
+
+
+            </div>
+            <div class="dados">
+                <h2 id="prod-name">Moletom Personalizado</h2>
+                <hr>
+                <div class="content">
+                    <div class="type">
+                        <!-- Tipo da cor -->
+                        <h3>Escolha a cor</h3>
+                        <div class="typebox">
+                            <div class="colors">
+                                <input type="radio" name="colortype" id="Branco" class="radio-inputs" checked>
+                                <label style="--colorSelect:white" for="Branco" class="color labels"
+                                    title="Branco"></label>
+                            </div>
+
+                            <div class="colors">
+                                <input type="radio" name="colortype" id="Azul-Escuro" class="radio-inputs">
+                                <label style="--colorSelect:#060f29" for="Azul-Escuro" class="color labels"
+                                    title="Azul-Escuro"></label>
+                            </div>
+
+                            <div class="colors">
+                                <input type="radio" name="colortype" id="Preto" class="radio-inputs">
+                                <label style="--colorSelect:black" for="Preto" class="color labels"
+                                    title="Preto"></label>
+                            </div>
+
+                            <div class="colors">
+                                <input type="radio" name="colortype" id="Cinza" class="radio-inputs">
+                                <label style="--colorSelect:gray" for="Cinza" class="color labels"
+                                    title="Cinza"></label>
+                            </div>
+
+                            <div class="colors">
+                                <input type="radio" name="colortype" id="Vermelho" class="radio-inputs">
+                                <label style="--colorSelect:crimson" for="Vermelho" class="color labels"
+                                    title="Vermelho"></label>
+                            </div>
+
+                            <div class="colors">
+                                <input type="radio" name="colortype" id="Laranja" class="radio-inputs">
+                                <label style="--colorSelect:orange" for="Laranja" class="color labels"
+                                    title="Laranja"></label>
+                            </div>
+
+                            <div class="colors">
+                                <input type="radio" name="colortype" id="Amarelo" class="radio-inputs">
+                                <label style="--colorSelect:yellow" for="Amarelo" class="color labels"
+                                    title="Amarelo"></label>
+                            </div>
+
+                            <div class="colors">
+                                <input type="radio" name="colortype" id="Verde" class="radio-inputs">
+                                <label style="--colorSelect:#04d304" for="Verde" class="color labels"
+                                    title="Verde"></label>
+                            </div>
+
+                            <div class="colors">
+                                <input type="radio" name="colortype" id="Azul" class="radio-inputs">
+                                <label style="--colorSelect:royalblue" for="Azul" class="color labels"
+                                    title="Azul"></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="type">
+                        <h3>Escolha o tamanho</h3> <!-- Tipo do tamanho -->
+                        <div class="typebox">
+                            <div class="sizes">
+                                <input type="radio" name="sizetype" id="P" class="radio-inputs" checked>
+                                <label for="P" class="size labels" title="P">P</label>
+                            </div>
+
+                            <div class="sizes">
+                                <input type="radio" name="sizetype" id="M" class="radio-inputs">
+                                <label for="M" class="size labels" title="M">M</label>
+                            </div>
+
+                            <div class="sizes">
+                                <input type="radio" name="sizetype" id="G" class="radio-inputs">
+                                <label for="G" class="size labels" title="G">G</label>
+                            </div>
+
+                            <div class="sizes">
+                                <input type="radio" name="sizetype" id="GG" class="radio-inputs">
+                                <label for="GG" class="size labels" title="GG">GG</label>
+                            </div>
+
+                            <div class="sizes">
+                                <input type="radio" name="sizetype" id="XGG" class="radio-inputs">
+                                <label for="XGG" class="size labels" title="XGG">XGG</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="type">
+                        <h3>Tipo da personalização<span class="obs">(Opcional | Apenas um tipo)</span></h3>
+                        <!-- Seleção da imagem -->
+                        <div class="typebox">
+                            <div class="personalização">
+                                <input type="radio" name="selectPerso" id="selectImg" class="radio-inputs">
+                                <label for="selectImg" id="selectImage" class="perso labels" title="Imagem"><i
+                                        class="fa-solid fa-file-image"></i></label>
+                            </div>
+
+                            <div id="imgModal" class="modal hidden">
+                                <div class="imgBox">
+                                    <div id="imgExit" class="fechar">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                    <h2>Selecione uma imagem</h2>
+                                    <div class="choseImage">
+                                        <input type="file" accept="image/*" name="chooseImage" id="chooseImage"
+                                            class="radio-inputs">
+                                        <label for="chooseImage" class="image labels" title="Selecione uma imagem"><i
+                                                class="fa-solid fa-file-image"></i></label>
+                                    </div>
+                                    <div id="showImage" class="showimage">
+                                        <img id="selectedImage" src="" alt="Imagem Selecionada"
+                                            style="visibility:hidden ;">
+                                    </div>
+                                    <span>Certifique-se de que a imagem <br> tenha uma boa qualidade.</span>
+                                    <div class="chooseImage">
+                                        <button id="send" class="send labels" title="Enviar">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="personalização">
+                                <input type="radio" name="selectPerso" id="selectText" class="radio-inputs">
+                                <label for="selectText" id="selectText" class="perso labels" title="Escreva um texto"><i
+                                        class="fa-regular fa-text"></i></label>
+                            </div>
+
+                            <div id="textModal" class="modal hidden">
+                                <div class="textBox">
+                                    <div id="textExit" class="fechar">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                    <h2>Escreva sua frase </h2>
+                                    <div class="choseText">
+                                        <input type="text" name="chooseText" id="chooseText" maxlength="30">
+                                        <span>Sua frase tem um limite de 30 letras.</span>
+                                        <button id="textSend" class="send labels" title="Enviar">Enviar</button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <h3>Preço<span class="obs">(Frete Gratis para todo Brasil!)</span></h3>
+                        <!-- Seleção da imagem -->
+                        <h3 class="preço">R$ <span id="price">95,00</sp>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="content buy">
+                    <div class="type">
+                        <div class="typebox">
+                            <button id="buyButton" class="btn primary">Comprar</button>
+                            <button id="addCart" class="btn">Adicionar ao Carrinho</button>
+                        </div>
+                        <div class="BuyModals">
+
+                            <div id="description" class="modal hidden">
+                                <div class="buyBox">
+                                    <div id="descExit" class="fechar">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                    <h2 id="desc-prod"></h2>
+                                    <p style="margin-bottom: 5px;">Se preciso iremos te contatar para combinar a
+                                        personalização.</p>
+                                    <div class="info">
+                                        <div class="content">
+                                            <div class="SelectColor">
+                                                <p>Cor selecionada: </p>
+                                                <span id="descColor" class="color"></span>
+                                            </div>
+                                            <div class="SelectSize">
+                                                <p>Tamanho selecionado: </p>
+                                                <span id="descSize" class="size"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+                                            <p>Tipo de personalização: <span id="descPerso"></span></p>
+                                            <p>Preço: <span id="descPrice"></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="buttonBox">
+                                        <button id="descBack" class="button">Cancelar</button>
+                                        <button id="payFormButton" class="button nextButton">Avançar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div id="payForm" class="modal hidden">
+                                <div class="payBox">
+                                    <div id="payExit" class="fechar">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                    <h2>Escolha um forma de pagamento</h2>
+                                    <button class="pay">Pix</button>
+                                    <button class="pay" disabled>Cartão de crédito</button>
+                                    <button class="pay" disabled>PayPal</button>
+                                    <div class="buttonBox">
+                                        <button id="payBack" class="button">Voltar</button>
+                                        <button id="pixFormButton" class="button nextButton">Avançar</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="pixForm" class="modal hidden">
+                                <div class="pixBox">
+                                    <div id="pixExit" class="fechar">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                    <h2>Escaneie o QrCode abaixo</h2>
+                                    <img class="QrCode" src="../img/produtos/QrCode/moletom.png"
+                                        alt="QrCode-Moletom-Personalizado">
+                                    <div class="buttonBox">
+                                        <button id="payFormBack" class="button">Voltar</button>
+                                        <button id="pixBuy" class="button nextButton">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="buyEnd" class="modal hidden">
+                                <div class="endBox">
+                                    <div id="endBoxLoading" class="loading">
+                                        <div class="logo"><img src="../img/logo/Logo-Black.png" alt=""></div>
+                                        <div class="pulse">
+                                            <div class="ball"></div>
+                                            <div class="ball"></div>
+                                            <div class="ball"></div>
+                                        </div>
+                                    </div>
+                                    <div id="endExit" class="fechar">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                    <h2>Compra concluida!</h2>
+                                    <div class="content">
+                                        <p>Sua compra foi concluida com sucesso, seu pedido irá entrar em análise e se caso o
+                                            pagamento não cair em até 24hrs ele será cancelado.</p>
+
+                                    </div>
+                                    <p>Telefone de contato:</p>
+                                    <span>(11)9999-9999</span>
+
+                                    <div class="buttonBox">
+                                        <button id="pixBuy" class="button nextButton"><a href="../index.html">Voltar as compras</a></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+</body>
+
+</html>

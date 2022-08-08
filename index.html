@@ -12,6 +12,7 @@
     <script src="js/theme-script.js" defer></script>
     <script src="js/hamburguer-menu.js"></script>
     <script src="js/carousel.js" defer></script>
+    <script src="../js/loading.js" defer></script>
 
 
     <script>
@@ -29,6 +30,14 @@
     </script>
 </head>
 <body>
+    <section id="loading" class="hidden">
+        <div class="logo"><img src="../img/logo/Logo-Black.png" alt=""></div>
+        <div class="pulse">
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+        </div>
+    </section>
     <header id="main">
         <div class="hamburguer" onclick="sidebarOn()">
             <div class="bar"></div>
@@ -46,7 +55,7 @@
 
             <div class="icones">
                 <ul class="icons">
-                    <li><a href="#"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                    <li><a href="#"><i class="fa-regular fa-cart-shopping"></i></a></li>
                     <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
                 </ul>
                 <div class="theme">
@@ -75,8 +84,7 @@
             </div>
 
             <ul class="side-icons">
-                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                <li><a href="#"><i class="fa-regular fa-cart-shopping"></i></a></li>
                 <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
             </ul>
             
@@ -116,7 +124,7 @@
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus necessitatibus repudiandae cum. Sed quod voluptatem officiis at praesentium enim dolores</p>
                             </div>
                             <div class="botão">
-                                <button class="button"><a href="#"><span>Ver detalhes</span></a></button>
+                                <button class="button"><a href="produtos/moletom-personalizado.html"><span>Ver detalhes</span></a></button>
                             </div>
                         </div>
                         <div class="imagens">
@@ -142,7 +150,7 @@
                 <div class="wraper-mobile mobile">
                     <div class="content-mobile mobile">
                         <div class="mobImagens" id="mobileAtual">
-                            <img src="img/produtos/Moletom.png" alt="">
+                            <img src="img/produtos/Banners/Moletom.png" alt="">
                             <div class="texto">
                                 <span class="prod">Moletom <span>unissex</span></span>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit facilis dignissimos eos rerum dolore corporis neque soluta aperiam repudiandae incidunt.</p>
@@ -150,7 +158,7 @@
                             </div>
                         </div> 
                         <div class="mobImagens">
-                            <img src="img/produtos/Almofada.png" alt="">
+                            <img src="img/produtos/Banners/Almofada.png" alt="">
                             <div class="texto">
                                 <span class="prod">Almofada <span>40x40</span></span>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit facilis dignissimos eos rerum dolore corporis neque soluta aperiam repudiandae incidunt.</p>
@@ -158,7 +166,7 @@
                             </div>
                         </div> 
                         <div class="mobImagens">
-                            <img src="img/produtos/Caneca.png" alt="">
+                            <img src="img/produtos/Banners/Caneca.png" alt="">
                             <div class="texto">
                                 <span class="prod">Caneca <span>personalizada</span></span>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit facilis dignissimos eos rerum dolore corporis neque soluta aperiam repudiandae incidunt.</p>

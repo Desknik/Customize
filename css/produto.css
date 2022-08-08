@@ -1,0 +1,698 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .produto{
+    display: flex;
+    align-items: center;
+    
+    width: 1500px;
+    height: 700px;
+    margin-top: 100px;
+
+
+}
+main .imagem{
+    position: relative;
+    width: 700px;
+    height: 600px;
+    margin: 50px;
+
+}
+
+main .imagem .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 650px;
+    height: 600px;
+
+
+    background-color: #CDCDCD;
+    border-radius: 30px;
+}
+
+main .imagem .img img{
+    width:  500px;
+    height: 500px;
+}
+
+                              /*Informações do produto (Box da direita) */
+
+main .dados{    
+    width: 700px;
+    height: 600px;
+    margin: 50px;
+}
+
+.dados h2{            /* Nome do Produto */
+    color: var(--inverted-color);
+    font-size: 2em;
+    margin: 5px 0px;
+}
+
+.dados hr{     /*Quebra de linha */
+    border: 1px solid #CDCDCD;
+    margin: 10px 0px;
+}
+
+.dados .content{    /*Box da escolha de cor e tamanho */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.dados .type{        /*Container das escolhas*/
+    margin: 20px;
+}
+
+.dados h3{         /* Titulo das escolhas */
+    display: inline-block;
+    color: var(--inverted-color);
+    font-size: 1.5em;
+    margin: 10px 0px;
+}
+
+.dados h3 .obs{         /* Titulo das escolhas */
+    display:block;
+    margin-top: 3px;
+    font-size: 0.6em;
+    font-weight: normal;
+    color: var(--inverted-color);
+}
+
+.dados .radio-inputs{    /* Inputs*/
+    display: none;
+}
+
+.dados .radio-inputs:checked + .labels{     /*Efeito de selecionado */
+    border: 3px solid var(--cor7);
+}
+
+.dados .radio-inputs:disabled+ .labels{     /*Efeito de desativado */
+    background-color: #CDCDCD ;
+}
+
+.dados .radio-inputs:disabled+ .color::before{    /*Risco de desativado das cores */
+    content: " ";
+    position: absolute;
+    width: 35px;
+    height: 1px;
+    background-color: black;
+    transform: rotate(45deg) translateY(12px) translateX(6px);
+}
+
+.dados .radio-inputs:disabled+ .size::before{    /*Risco de desativado do tamanho */
+    content: " ";
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: black;
+    transform: rotate(30deg);
+}
+
+.dados .labels{  /* Personalização das labels */
+    cursor: pointer;
+    color: var(--inverted-color);
+}
+
+.dados .labels:hover{         /* Hover das labels */
+    transform: scale(1.1);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.178);
+}
+
+.dados .typebox{           /*Box das escolhas*/
+    display: flex;
+    gap: 5px;
+}
+
+.dados .color{         /* Personalização da escolha de cores (Label) */
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    border-radius: 5px;
+    background-color: var(--colorSelect);
+    border: 2px solid #CDCDCD;
+}
+
+
+.dados .size{         /* Personalização da escolha do tamanho (label) */
+    display: flex;
+    width: 50px;
+    height: 35px;
+    margin-right: 3px;
+
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 5px;
+    border: 2px solid #CDCDCD;
+
+}
+
+.dados .perso{   /* Selecione o tipo de personalização */
+    display: flex;
+    width: 130px;
+    height: 45px;
+    margin-right: 8px;
+
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 2em;
+    color: var(--cor7);
+
+    border-radius: 5px;
+    border: 2px solid var(--cor7);
+    background-color: var(--normal-color);
+}
+
+.dados .perso:active, .dados .perso:focus{   /* Personalização de quando estiver selecionado */
+    color: var(--cor5);
+    background-color: var(--cor7);
+}
+
+.dados .radio-inputs:checked + .perso{   /* Personalização de ser escohlida */
+    color: var(--cor5);
+    background-color: var(--cor7);
+}
+
+.dados .modal{   /* Background do modal */
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.589);
+    transition: all 300ms;
+}
+
+.dados .hidden{
+    visibility: hidden;
+    opacity: 0;
+} 
+
+.dados .modal .imgBox{    /*Box do modal */
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 30%;
+    height: 70%;
+
+    background-color: var(--normal-color);
+    border-radius: 15px;
+}
+
+.dados .modal .fechar{   /*Botão de fechar o modal */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 40px;
+    height: 40px;
+
+    z-index: 999;
+    cursor: pointer;
+}
+
+.dados .modal .fechar .bar{
+    position: absolute;
+
+    width: 40px;
+    height: 5px;
+
+    background-color: #CDCDCD;
+    border-radius: 5px;
+}
+
+.dados .modal .fechar .bar:nth-child(1){
+    top: 15px;
+    left: 0px;
+    transform: rotate(45deg);
+}
+
+.dados .modal .fechar .bar:nth-child(2){
+    top: 15px;
+    left: 0px;
+    transform: rotate(-45deg);
+}
+
+.dados .modal h2{   /* Titulo do modal */
+    margin-top: 50px;
+
+}            
+                       
+/* Modal para escolher a imagem */
+
+.dados .modal .image{   /* Botão para selecionar a imagem */
+    display: flex;
+    width: 400px;
+    height: 45px;
+
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    font-size: 2em;
+    color: var(--cor7);
+
+    border-radius: 5px;
+    border: 2px solid var(--cor7);
+    background-color: var(--normal-color);
+}    
+
+.dados .modal .showimage{   /* Box que a imagem vai aparecer */
+    width: 350px;
+    height: 250px;
+
+    border: 2px dashed var(--cor7);
+    border-radius: 5px;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.dados .modal span{
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--inverted-color);
+}
+
+
+.dados .modal .send{   /* Botão enviar */
+    display: flex;
+    width: 400px;
+    height: 45px;
+
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--cor5);
+
+    border-radius: 5px;
+    border: 2px solid var(--cor7);
+    background-color: var(--cor7);
+}    
+
+/* Modal para escolher o texto */
+.dados .modal .textBox{    /*Box do modal */
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 30%;
+    height: 30%;
+
+    background-color: var(--normal-color);
+    border-radius: 15px;
+}
+
+
+.dados .modal .chooseText {
+    display: flex;
+    align-items: center;
+}
+
+.dados .modal #chooseText{
+    display: block;
+    width: 300px;
+    height: 30px;
+
+    margin: 20px auto 20px auto;
+    border-radius: 5px;
+    border: 1px solid var(--cor7);
+    outline: none;
+}
+
+
+.dados .price{  /* Box do preço */
+    display: Block;
+    width: 280px;
+    height: 130px;
+
+    padding: 0px 10px;
+    margin-right: 25px;
+
+    color: var(--cor7);
+    background-color: var(--cor6);
+    border-radius: 3px;
+
+}
+
+.dados .price h3, .dados .price span{
+    color: var(--inverted-color)
+   
+}
+.dados .price .preço, .dados .price #price {  /* Box do preço */
+    color: var(--normal-color);
+
+}
+
+.dados .buy{    /* Box para compra*/
+    margin-top: 50px;
+}
+
+.dados .btn{      /* Botões */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 300px;
+    height: 50px;
+
+    margin-right: 50px;
+
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--inverted-color);
+
+    background-color: var(--normal-color);
+    border: 2px solid var(--cor7);
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}
+
+.dados .primary{      /* Botões */
+    background-color: var(--cor7);
+    color: var(--cor5);
+
+}
+
+.dados .btn:hover{         /* Hover das labels */
+    transform: scale(1.1);
+    box-shadow: 0px 3px 10px var(--cor7);
+}
+
+/* Modais de compras */
+
+.dados .modal .buyBox{    /*Box do modal */
+    color: var(--inverted-color);
+}
+
+.dados .modal .buyBox{    /*Box do modal */
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 33%;
+    height: 33%;
+
+    background-color: var(--normal-color);
+    border-radius: 15px;
+}
+
+.dados .modal .buyBox h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.dados .modal .buyBox .info{
+    width: 70%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.dados .modal .content{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    gap: 30px;
+}
+
+.dados .modal .buyBox .info .SelectColor, .dados .modal .buyBox .info .SelectSize{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.dados .modal .buyBox .info .size{
+    display: flex;
+    cursor: default;
+}
+
+.dados .modal .buyBox .info span{
+    display: inline;
+    padding: 2px;
+}
+
+
+.dados .modal .buttonBox{
+    position: absolute;
+    bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.dados .modal .button{
+    width: 150px;
+    padding: 10px;
+
+    text-align: center;
+    font-weight: 600;
+    color: var(--normal-color);
+
+    border: none;
+    border-radius: 5px;
+    background-color: var(--inverted-color);
+    cursor: pointer;
+}
+
+.dados .modal .button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 3px 10px var(--cor7);
+}
+
+.dados .modal .nextButton{
+    color: var(--cor5);
+    background-color: var(--cor7) !important;
+}
+
+
+
+
+.dados .modal .payBox{    /* Modal de forma de pagamento  */
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 33%;
+    height: 32%;
+
+    background-color: var(--normal-color);
+    border-radius: 15px;
+}
+
+
+.dados .modal .payBox .pay{  
+    width: 80%;
+    height: 35px;
+    
+    margin: 5px;
+    padding: 0px 15px;
+    
+    text-align: left;
+    color: var(--normal-color);
+    
+    border: 1px solid var(--inverted-color);
+    border-radius: 1px;
+    background-color: var(--inverted-color);
+    
+
+    cursor: pointer;
+}
+
+.dados .modal .payBox .pay:disabled{
+    opacity: 0.7;
+    color: var(--normal-color);
+    cursor: default;
+ 
+}
+
+.dados .modal .pixBox{    /* Modal da forma de pix  */
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 33%;
+    height: 50%;
+
+    background-color: var(--normal-color);
+    border-radius: 15px;
+}
+
+.dados .modal .pixBox .QrCode{
+    width: 250px;
+    height: 250px;
+    margin: 20px;   
+  
+}
+
+.dados .modal .endBox{    /* Modal de finalizamento da compra  */
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 33%;
+    height: 33%;
+
+    background-color: var(--normal-color);
+    border-radius: 15px;
+}
+
+.endBox .loading{
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--normal-color);
+    border-radius: 15px;
+    transition: all 300ms;
+    z-index: 9999;
+    animation: loading 5s;
+}
+
+.endBox .loading .logo{
+    position: absolute;
+    z-index: 100;
+    animation: intro 1s ease;
+}
+
+.endBox .loading .logo img{
+    width: 150px;
+    height: 150px;
+}
+
+.endBox .loading .pulse{
+    position: relative;
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+    background-color: var(--cor6);
+    animation: intro 1s ease;
+}
+
+.endBox .loading .ball{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 100%;
+    background-color: var(--cor6);
+    opacity: 0.8;
+    animation: pulse 3s ease-out infinite;
+}
+
+.endBox .loading .ball:nth-child(1){
+    animation-delay: -1s;
+}
+
+.endBox .loading .ball:nth-child(2){
+    animation-delay: -2s;
+    
+}
+
+.endBox .loading .ball:nth-child(3){
+    animation-delay: -3s;
+}
+
+@keyframes intro {
+    0%{
+        transform: scale(0);
+        opacity: 0.5;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+
+
+.dados .modal .endBox .content{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+    text-align: center;
+}
+
+.dados .modal .endBox p, .dados .modal .endBox span{
+    color: var(--inverted-color);
+}
+
+.dados .modal .endBox a{
+    color: var(--cor5);
+}
+   
+
+
+@media (max-width: 1700px) {
+    
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1010px) {
+    .produto{
+        flex-direction: column;
+    }
+}
+
+
+
+
